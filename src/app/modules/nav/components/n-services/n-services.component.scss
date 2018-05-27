@@ -1,0 +1,28 @@
+.service_content {
+	%common-text-style {
+	    text-shadow: 1px 1px lightgrey;
+	    font-weight: 300;
+	    font-style: normal;
+	    line-height: 40px;
+	}
+	.service-desc1 {
+		font-size: 25px;
+	    color: #616366;
+	    text-align: center;
+	    @extend %common-text-style;
+	}
+
+	.service-header {
+		.service-title {
+			@extend %common-text-style;
+			color: #4472C4;
+			font-size: 30px;
+		}
+	}
+
+	.page_change {
+		.getpt {
+			background-color: yellow;
+		}
+	}
+}

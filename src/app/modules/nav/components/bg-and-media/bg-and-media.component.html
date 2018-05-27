@@ -1,0 +1,16 @@
+<div class="bg-and-media-content" *ngIf="top_blogs">
+	<div fxLayout fxLayoutAlign="center" class="bm-header">
+ 		<button mat-button color="primary" (click)='disp_cont(4)'><p class="bm-title">~  Blog & media ~</p></button>
+	</div>
+	<div fxLayout="row wrap" fxLayoutAlign="center stretch"  fxLayoutGap="10px" >
+        <div *ngFor='let item of top_blogs;let i = index' fxFlex="70" fxFlex.lt-md='100' class="bg-content">
+            <div class="bg-content-main">
+                <p (click)="click_blog(i)">
+                    {{item.bgcont.title}}
+                    <span class="checkmark">[ {{item.bgcont.date}} ]</span>
+                </p>
+            </div>
+            <p class="extend-text" [ngClass]="{'has-height' : item.clicked}">{{item.bgcont.content}}</p>
+        </div>
+	</div>
+</div>

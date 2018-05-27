@@ -1,0 +1,39 @@
+.about-content {
+	%common-text-style {
+	    text-shadow: 1px 1px lightgrey;
+	    font-weight: 300;
+	    font-style: normal;
+	    line-height: 40px;
+	}
+	
+	.about-header {
+		.about-title {
+			@extend %common-text-style;
+			color: #4472C4;
+			font-size: 30px;
+			padding-top: 20px;
+		}
+	}
+
+	.about-desc {
+		@extend %common-text-style;
+		font-size: 25px;
+	    color: #616366;
+	    text-align: center;
+	}
+
+	.about-main {
+		.about-cont > div {
+			text-align: center;
+			padding: 20px;
+			border-radius: 10px;
+			background-color: #CCCCCC;
+			margin: 0px 15%;
+			margin-bottom: 30px;
+			height: 40px;
+			color: white;
+		    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+	}
+}

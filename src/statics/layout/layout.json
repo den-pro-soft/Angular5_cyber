@@ -1,0 +1,26 @@
+{
+    "nav_bar" : {
+        "items" : [
+            {
+                "type" : "iconmoon",
+                "text" : "PCCS",
+                "style" : "icon-Old-TV"
+            },
+            {
+                "type" : "iconmoon",
+                "text" : "Services",
+                "style" : "icon-Old-TV"
+            },
+            {
+                "type" : "iconmoon",
+                "text" : "Blogs & Media",
+                "style" : "icon-Reel"
+            },
+            {
+                "type" : "iconmoon",
+                "text" : "About",
+                "style" : "icon-Movie"
+            }
+        ]
+    }
+}

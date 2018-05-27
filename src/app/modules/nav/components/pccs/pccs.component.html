@@ -1,0 +1,13 @@
+<div style="padding-top: 10px;">
+	<owl-carousel
+	     [options]="{items: 1, dots: true, navigation: true, rewind : true, autoplay : true, autoplayTimeout : 3000, loop: true , smartSpeed:1750}"
+	     [items]="images"
+	     [carouselClasses]="['owl-theme', 'row', 'sliding']">
+	     <div class="item" *ngFor="let image of images;let i = index">
+	         <div class="thumbnail-image" [ngStyle]="{'background-image': 'url(' + image + ')'}"></div>
+	     </div>
+	 </owl-carousel>
+	 <div class="pccs-desc">
+	 	<p>You are less “cyber credible” when more of your digital footprint is found lost on Internet.  People who is lesser cyber credible are more likely falling victim of impersonation and cyber crimes.</p>
+	 </div>
+</div>

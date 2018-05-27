@@ -1,0 +1,20 @@
+<mat-sidenav-container class="main-header img-responsive">
+	<div fxLayout fxLayout.xs="column" fxFlex.lt-md='false' fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="5px">
+	 	<button mat-button color="warn" (click)='disp_cont(1)' [scrollTo]='pccs'>PCCS</button>
+	 	<button mat-button color="warn" (click)='disp_cont(2)' [scrollTo]='nservices'>Services</button>
+	 	<button mat-button color="warn" (click)='disp_cont(3)' [scrollTo]='media'>Blogs & Media</button>
+	 	<button mat-button color="warn" (click)='disp_cont(4)' [scrollTo]='about'>About</button>
+	</div>
+</mat-sidenav-container>
+<div #pccs>
+	<app-pccs></app-pccs>
+</div>
+<div #nservices>
+	<app-n-services></app-n-services>
+</div>
+<div #media>
+	<app-bg-and-media></app-bg-and-media>
+</div>
+<div #about>
+	<app-about></app-about>
+</div>

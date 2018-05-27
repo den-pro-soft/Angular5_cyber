@@ -1,0 +1,45 @@
+.bg-and-media-content {
+	%common-text-style {
+	    text-shadow: 1px 1px lightgrey;
+	    font-weight: 300;
+	    font-style: normal;
+	    line-height: 40px;
+	}
+
+	.bm-header {
+		.bm-title {
+			@extend %common-text-style;
+			color: #4472C4;
+			font-size: 30px;
+		}
+	}
+
+	.bg-content {
+		@extend %common-text-style;
+		font-size: 25px;
+	    color: black;
+	    text-align: center;
+	    margin-right: 0px !important;
+
+	    .bg-content-main {
+		    border-radius: 10px;
+		    background-color: #5B9BD5;
+		    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		    cursor: pointer;
+		    padding: 10px 0px;
+		    margin-bottom: 20px;
+		}
+
+		.extend-text{
+		    transition: all .9s ease;
+		    max-height: 0;
+		    overflow: hidden;
+		}
+
+		.has-height{
+			max-height: 500px;
+		}
+	}
+
+}

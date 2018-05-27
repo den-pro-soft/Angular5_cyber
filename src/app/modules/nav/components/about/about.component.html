@@ -1,0 +1,21 @@
+<div class="about-content">
+	<div fxLayout fxLayoutAlign="center" class="about-header">
+ 		<p class="about-title">~  About ~</p>
+	</div>
+	<div class="about-desc">
+	 	<p>We aim at empowering online consumers to regain their Rights-to-Know about their lost cyber identities.</p>
+	</div>
+	<div class="about-main">
+        <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+            <div *ngFor='let item of about_data;let i = index' fxFlex='30' fxFlex.lt-md='100' class="about-cont">
+            	<div style="background-color: #A7C724;">{{item.name}}<br>{{item.pos}}</div>
+            </div>
+            <div *ngFor='let item of about_data;let i = index' fxFlex='30' fxFlex.lt-md='100' class="about-cont">
+            	<div>{{item.advisor_name}}<br>{{item.advisor_pos}}</div>
+            </div>
+            <div *ngFor='let item of about_data;let i = index' fxFlex='30' fxFlex.lt-md='100' class="about-cont">
+            	<div></div>
+            </div>
+        </div>
+	</div>
+</div>
