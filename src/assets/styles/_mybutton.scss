@@ -1,0 +1,97 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@ng-select/ng-select/themes/material.theme.css";
+
+$EE-Green-Color : #00AC4E;
+$EE-Yellow-Color : #FFCF01;
+$EE-Pink-Color : #EE2A7B;
+$EE-Blue-Color : midnightblue;
+$EE-Light-Blue : rgb(230,241,247);
+
+.back-cl-light-blue{background-color: $EE-Light-Blue}
+.back-cl-green{background-color: $EE-Green-Color !important}
+.cl-green{color:$EE-Green-Color!important}
+.back-cl-yellow{background-color: $EE-Yellow-Color !important}
+.cl-yellow{color:$EE-Yellow-Color !important}
+.back-cl-pink{background-color: $EE-Pink-Color !important}
+.cl-pink{color:$EE-Pink-Color !important}
+.back-cl-blue{background-color: $EE-Blue-Color !important}
+.cl-blue{color:$EE-Blue-Color !important}
+.back-cl-primary{background-color: $EE-Blue-Color !important}
+.cl-primary{color: $EE-Blue-Color}
+.border-2-primary{border : 2px solid $EE-Blue-Color}
+.border-2-yellow{border : 2px solid $EE-Yellow-Color}/****** COMPONENTS STYLE ******/
+
+    /*-------Button-------------*/
+.button-effect
+{
+    transition: all 0.2s linear 0s;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.32);
+    cursor : pointer;
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+    background-color: unset;
+    text-transform: capitalize;
+    border: none;
+    min-width: 130px;
+    height: 35px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 5px;
+    a
+    {
+        height: 100%;
+        width: 100%;
+        line-height: 31px;
+        display: block;
+        text-decoration: none;
+        color : #fff;
+    }
+    &:before
+    {
+        content: "\f054";
+        display: flex;
+        align-items: center;
+        font-family: FontAweSome;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0px;
+        height: 100%;
+        width: 30px;
+        background-color: rgba(#fff,0.3);
+        border-radius: 0 50% 50% 0;
+        transform: scale(0,1);
+        transform-origin: left center;
+        transition: all 0.2s linear 0s;
+    }
+
+    &:hover
+    {
+        text-indent: 15px;
+        &:before
+        {
+          transform: scale(1,1);
+          text-indent: 0;
+        }
+    }
+
+    &:focus
+    {
+      outline:0 !important;
+    }
+
+    &:active
+    {
+        opacity: 0.8;
+        box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.52);
+        transform: translateY(2px);
+    }
+
+    &:disabled
+    {
+        opacity: 0.4;
+        cursor: default;
+        pointer-events: none;
+    }
+}

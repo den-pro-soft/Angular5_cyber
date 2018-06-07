@@ -1,0 +1,40 @@
+@import "../../../../../assets/styles/mybutton";
+@import "../../../../../assets/styles/variable";
+
+$color : grey;
+
+section{
+    color : $color;
+
+    button{
+        margin: 0;
+        font-weight: bold;
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+        color : $color;
+        &:focus{
+            outline: none;
+        }
+        &:hover
+        {
+            color: $EE-Blue-Color;
+        }
+    }
+
+    input{
+        height: 30px;
+        padding: 0;
+        border: 1px solid $color;
+        border-radius: 5px;
+        padding-left: 5px;
+        margin-bottom: 20px;
+        margin-top : 10px;
+        line-height: 28px;
+        text-align: center;
+
+        &:focus{
+            outline: none;
+        }
+    }
+}

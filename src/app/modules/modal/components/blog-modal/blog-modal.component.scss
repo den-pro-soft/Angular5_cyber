@@ -1,0 +1,68 @@
+@import "../../../../../assets/styles/variable.scss";
+@import '../../../../../assets/styles/mybutton';
+
+.bg-modal {
+	text-align: center;
+    text-shadow: 1px 1px lightgrey;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+
+	.bg-modal-title {
+		color: #081b33;
+
+		@media #{$large-and-up} {
+			font-size: 35px;
+    		line-height: 35px;
+		}
+
+		@media #{$medium-and-down} {
+			font-size: 20px;
+    		line-height: 22px;
+		}
+	}
+
+	.bg-modal-date {
+		color: #e54a35;
+
+		@media #{$large-and-up} {
+			font-size: 20px;
+    		line-height: 35px;
+		}
+
+		@media #{$medium-and-down} {
+			font-size: 12px;
+    		line-height: 22px;
+		}
+	}
+
+	.bg-modal-content {
+		color: #616366;
+
+		@media #{$large-and-up} {
+			font-size: 18px;
+    		line-height: 35px;
+		}
+
+		@media #{$medium-and-down} {
+			font-size: 14px;
+    		line-height: 22px;
+		}
+	}
+
+	.thumbnail-image {
+		
+		width: 100%;
+
+	    background-repeat: no-repeat;
+	    background-size: cover;
+
+		@media #{$large-and-up} {
+			height: 450px;
+		}
+
+		@media #{$medium-and-down} {
+			height: 165px;
+		}
+	}
+}

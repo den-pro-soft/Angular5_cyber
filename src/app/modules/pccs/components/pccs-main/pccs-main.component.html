@@ -1,0 +1,16 @@
+<mat-toolbar fxLayout fxLayoutAlign="end center" color="primary" id="pccs-toolbar">
+	<button mat-button [matMenuTriggerFor]="menu">
+		Auth Menu
+	</button>
+	
+	<mat-menu #menu="matMenu">
+	  <button mat-menu-item (click)='check_email_func()' *ngIf="isLoggedIn">Check E-mail</button>
+	  <button mat-menu-item (click)='pccs_login_func()' *ngIf="!isLoggedIn">Login</button>
+	  <button mat-menu-item (click)='pccs_signup_func()' *ngIf="!isLoggedIn">Signup</button>
+	  <button mat-menu-item (click)='pccs_logout_func()' *ngIf="isLoggedIn">Logout</button>
+	</mat-menu>
+</mat-toolbar>
+<div *ngIf="isSignup">Signed up Successfully!!!</div>
+<div *ngIf="isLoggedIn">
+	<router-outlet></router-outlet>
+</div>

@@ -1,3 +1,5 @@
+@import '../../../../../assets/styles/mybutton';
+
 .bg-and-media-content {
 	%common-text-style {
 	    text-shadow: 1px 1px lightgrey;
@@ -7,17 +9,19 @@
 	}
 
 	.bm-header {
+		margin: 3% 0px;
 		.bm-title {
 			@extend %common-text-style;
 			color: #4472C4;
 			font-size: 30px;
+			margin: 0px;
 		}
 	}
 
 	.bg-content {
 		@extend %common-text-style;
-		font-size: 25px;
-	    color: black;
+		font-size: 20px;
+	    color: white;
 	    text-align: center;
 	    margin-right: 0px !important;
 
@@ -27,7 +31,7 @@
 		    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		    cursor: pointer;
-		    padding: 10px 0px;
+		    padding: 5px 0px;
 		    margin-bottom: 20px;
 		}
 
@@ -40,6 +44,12 @@
 		.has-height{
 			max-height: 500px;
 		}
+	}
+
+	.bg-content:hover {
+		max-width: 72% !important;
+		transition: all .4s ease;
+		-webkit-transition: all .4s ease;
 	}
 
 }

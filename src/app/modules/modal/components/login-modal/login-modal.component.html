@@ -1,0 +1,29 @@
+<section>
+  <div fxLayout="row" fxLayoutAlign="center">
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <mat-card fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+        <mat-card-title>Login Field</mat-card-title>
+        <mat-card-content>
+          <form class="p-20" fxLayout="column" fxLayoutAlign="space-between center">
+            <div fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="5px">              
+              <mat-label>E-mail</mat-label>
+              <input matInput [(ngModel)]="loginModel.email" (focus) = "emailFocus()" label="Email" type="text" name="email" required>
+              <mat-error *ngIf="error_msg">{{error_msg.email_error}}</mat-error>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="5px">
+                <mat-label>Password</mat-label>
+                <input matInput [(ngModel)]="loginModel.password" label="Password" (focus) = "passFocus()" type="password" name="password" required>
+              <mat-error *ngIf="error_msg">{{error_msg.pass_error}}</mat-error>
+            </div>              
+            <!-- <re-captcha formControlName="g-recaptcha-response"></re-captcha> -->
+            <mat-dialog-actions fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
+              	<button mat-button [disabled]="!loginModel.email || !loginModel.password" (click)="Login()">Login
+              	</button>
+            	<mat-error *ngIf="error_msg">{{error_msg.login_error}}</mat-error>
+            </mat-dialog-actions>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>

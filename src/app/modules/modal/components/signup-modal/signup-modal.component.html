@@ -1,0 +1,35 @@
+<section>
+  <div fxLayout="row" fxLayoutAlign="center">
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <mat-card fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+        <mat-card-title>Signup Field</mat-card-title>
+        <mat-card-content>
+          <form class="p-20" fxLayout="column" fxLayoutAlign="space-between center">
+            <div fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="5px">
+              <mat-label>Username</mat-label>
+              <input matInput [(ngModel)]="signModel.username" label="text" type="text" name="username" required>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="5px">              
+              <mat-label>E-mail</mat-label>
+              <input matInput [(ngModel)]="signModel.email" (focus) = "emailFocus()" label="Email" type="text" name="email" required>
+              <mat-error *ngIf="error_msg">{{error_msg.email_error}}</mat-error>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" class="country-ctrl">
+                <mat-label>Place of Residence</mat-label>
+                <div id="country" fxLayoutAlign="center center" class="country" [ngClass]='flagState'>
+                    <mat-select [(ngModel)]="signModel.placeResidence" (change)="onChangeCountry()" name="cnt">
+                        <mat-option *ngFor="let item of countryNames" [value]="item.name">{{item.name}}</mat-option>
+                    </mat-select>
+                </div>
+            </div>              
+            <!-- <re-captcha formControlName="g-recaptcha-response"></re-captcha> -->
+            <mat-dialog-actions>
+              <button mat-button [disabled]="!signModel.username ||!signModel.email" (click)="SignUp()">Signup
+              </button>
+            </mat-dialog-actions>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>

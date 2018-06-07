@@ -10,9 +10,15 @@
             <div *ngFor='let item of about_data;let i = index' fxFlex='30' fxFlex.lt-md='100' class="about-cont">
             	<div style="background-color: #A7C724;">{{item.name}}<br>{{item.pos}}</div>
             </div>
+            <div class="about-desc" fxFlex='100'>
+			 	<p>Board of Advisors</p>
+			</div>
             <div *ngFor='let item of about_data;let i = index' fxFlex='30' fxFlex.lt-md='100' class="about-cont">
             	<div>{{item.advisor_name}}<br>{{item.advisor_pos}}</div>
             </div>
+            <div class="about-desc" fxFlex='100'>
+			 	<p>Affiliations</p>
+			</div>
             <div *ngFor='let item of about_data;let i = index' fxFlex='30' fxFlex.lt-md='100' class="about-cont">
             	<div></div>
             </div>

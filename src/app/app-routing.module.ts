@@ -1,6 +1,11 @@
 import { RouterModule, Routes } from '@angular/router';
-import { NavModule } from './modules/nav/nav.module';
+import { NavModule, BlogsModule, PccsModule } from './modules';
 
-const routes: Routes = [{ path: '**', loadChildren: () => NavModule }];
+const routes: Routes = [
+	{ path: 'blog-page', loadChildren: () =>  BlogsModule},
+	{ path: 'main', loadChildren: () => NavModule },
+	{ path: 'pccs', loadChildren: ()=>  PccsModule},
+	{ path: '', redirectTo : 'main', pathMatch : 'full' }
+];
 
 export const AppRoutingModule = RouterModule.forRoot(routes, { useHash: false });

@@ -1,0 +1,30 @@
+<section>
+  <div fxLayout="row" fxLayoutAlign="center">
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <mat-card fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+        <mat-card-title>Reset Password Field</mat-card-title>
+        <mat-card-content>
+          <form class="p-20" fxLayout="column" fxLayoutAlign="space-between center">
+            <div fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="5px">
+              <div fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="5px">
+                <mat-label>Password</mat-label>
+                <input matInput [(ngModel)]="rs_pass.new_password1" label="Password" (focus) = "passFocus()" type="password" name="password" required>
+              </div>
+              <div fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="5px">
+                <mat-label>Confrim Password</mat-label>
+                <input matInput [(ngModel)]="rs_pass.new_password2" label="Password" (focus) = "passFocus()" type="password" name="password" required>
+              </div>
+              <mat-error *ngIf="error_msg">{{error_msg.pass_error}}</mat-error>
+            </div>
+            <!-- <re-captcha formControlName="g-recaptcha-response"></re-captcha> -->
+            <mat-dialog-actions fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
+              	<button mat-button [disabled]="!rs_pass.new_password1 || !rs_pass.new_password2" (click)="ResetPass()">Reset Password
+              	</button>
+            	<mat-error *ngIf="error_msg">{{error_msg}}</mat-error>
+            </mat-dialog-actions>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>

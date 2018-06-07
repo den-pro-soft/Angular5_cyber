@@ -1,0 +1,152 @@
+@import "../../../../../assets/styles/mybutton";
+@import "../../../../../assets/styles/variable";
+
+$color : grey;
+
+section{
+    color : $color;
+
+    button{
+        margin: 0;
+        font-weight: bold;
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+        color : $color;
+        &:focus{
+            outline: none;
+        }
+        &:hover
+        {
+            color: $EE-Blue-Color;
+        }
+    }
+
+    input{
+        height: 30px;
+        padding: 0;
+        border: 1px solid $color;
+        border-radius: 5px;
+        padding-left: 5px;
+        margin-bottom: 20px;
+        margin-top : 10px;
+        line-height: 28px;
+        text-align: center;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+	#country {
+        display: flex;
+        align-items: center;
+     	width: 40%;
+
+		@media #{$large-and-up} {
+   		  	width: 40%;
+		}
+
+		@media #{$medium-and-down} {
+   		  	width: 52%;
+		}
+
+        mat-select {
+        	text-align: center;
+        }
+    }
+
+    #country::before {
+        display: inline-flex;
+        content: "";
+        width: 21px;
+        height: 15px;
+        background: url('../../../../../assets/flags.svg');
+        background-position: -1000px -1000px;
+        background-repeat: no-repeat;
+        margin-right: 5px;
+    }
+    #country {
+        &.at::before {
+            background-position: -165px -10px;
+        }
+        &.au::before {
+            background-position: -196px -10px;
+        }
+        &.be::before {
+            background-position: -227px -10px;
+        }
+        &.br::before {
+            background-position: -351px -10px;
+        }
+        &.ca::before {
+            background-position: -382px -10px;
+        }
+        &.ch::before {
+            background-position: -475px -10px;
+        }
+        &.cn::before {
+            background-position: -41px -35px;
+        }
+        &.de::before {
+            background-position: -134px -35px;
+        }
+        &.dk::before {
+            background-position: -196px -35px;
+        }
+        &.es::before {
+            background-position: -320px -35px;
+        }
+        &.eu::before {
+            background-position: -351px -35px;
+        }
+        &.fi::before {
+            background-position: -382px -35px;
+        }
+        &.fr::before {
+            background-position: -413px -35px;
+        }
+        &.gb::before {
+            background-position: -475px -35px;
+        }
+        &.hk::before {
+            background-position: -41px -60px;
+        }
+        &.ie::before {
+            background-position: -196px -60px;
+        }
+        &.it::before {
+            background-position: -351px -60px;
+        }
+        &.jp::before {
+            background-position: -444px -60px;
+        }
+        &.lu::before {
+            background-position: -258px -85px;
+        }
+        &.mx::before {
+            background-position: -475px -85px;
+        }
+        &.nl::before {
+            background-position: -103px -110px;
+        }
+        &.no::before {
+            background-position: -134px -110px;
+        }
+        &.nz::before {
+            background-position: -165px -110px;
+        }
+        &.pt::before {
+            background-position: -413px -110px;
+        }
+        &.se::before {
+            background-position: -103px -135px;
+        }
+        &.sg::before {
+            background-position: -134px -135px;
+        }
+        &.us::before {
+            background-position: -475px -135px;
+        }
+    }
+}

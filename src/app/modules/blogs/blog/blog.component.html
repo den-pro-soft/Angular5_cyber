@@ -1,0 +1,52 @@
+<div class="blog-main">
+	<div fxFlex="100" class="blog-banner">
+		<div class="back" fxLayout="row" fxLayoutAlign="end end" style="">
+			<button mat-button (click)='toMainPage()' class="button-effect home-btn">
+				<<
+				Home
+			</button>
+		</div>
+	</div>
+	<div class="blog-main-content">
+		<div fxLayout="column" fxLayoutAlign="center center" class="blog-header img-responsive">
+			<div fxLayoutAlign="center" class="title">
+				<p>Follow our news.</p>
+			</div>
+		</div>
+		<div class="blog-content">
+			<div fxLayout="row wrap" fxLayoutAlign="center stretch"  fxLayoutGap="10px" >
+		        <div *ngFor='let item of pagedItems;let i = index' fxFlex="60" fxFlex.lt-md='100' class="bg-content">
+	                <div class="bg-content-main" (click)="click_blog(i)">
+	                    <p>
+	                        {{item.bgcont.title}}<br>
+	                        <span class="checkmark">[ {{item.bgcont.date}} ]</span>
+	                    </p>
+	                </div>
+	                <p class="extend-text" [ngClass]="{'has-height' : item.clicked}">{{item.bgcont.content}}</p>
+		        </div>
+			</div>
+
+			<!-- pager -->
+	        <ul *ngIf="pager.pages && pager.pages.length" class="pagination" fxLayout="row" fxLayoutAlign="center center">
+	            <li [ngClass]="{disabled:pager.currentPage === 1}">
+	            	<button mat-raised-button (click)='setPage(1)'>First</button>
+	            </li>
+	            <li [ngClass]="{disabled:pager.currentPage === 1}">
+	            	<button mat-raised-button (click)='setPage(pager.currentPage - 1)'>Previous</button>
+	            </li>
+	            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+	            	<button mat-raised-button (click)='setPage(pager.currentPage + 1)'>Next</button>
+	            </li>
+	            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+	            	<button mat-raised-button (click)='setPage(pager.totalPages)'>Last</button>
+	            </li>
+	        </ul>
+	    </div>
+		<div fxLayout="column" fxLayoutAlign="center center">
+			<p class="subscribe">Subscribe to our newsletters</p>
+		</div>
+	    <div fxLayout="column">
+	    	<app-subscriber></app-subscriber>
+	    </div>
+	</div>
+</div>

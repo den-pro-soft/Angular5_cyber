@@ -1,4 +1,6 @@
 export interface BlogModel {
-    bgcont : {};
-    clicked : boolean;
+    title: string;
+    content: string;
+    date: string;
+    image: string;
 }

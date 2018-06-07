@@ -1,0 +1,26 @@
+<section class="bg-modal" fxLayout="row wrap"  fxLayoutAlign="center center">
+	<span class="bg-modal-title">{{blog_data.title}}</span>
+	<div fxFlex="70" fxFlex.lt-md='100'>
+		<br><br>
+        <span class="bg-modal-date">{{blog_data.date}}</span>
+	</div>
+	<div fxFlex="70" fxFlex.lt-md='100'>		
+		<owl-carousel
+		     [options]="{items: 1, dots: true, navigation: true, rewind : true, autoplay : true, autoplayTimeout : 3000, loop: true , smartSpeed:1750}"
+		     [items]="images"
+		     [carouselClasses]="['owl-theme', 'row', 'sliding']" >
+		     <div class="item" *ngFor="let image of images;let i = index">
+		         <img class="thumbnail-image img-responsive" [src] = "image">
+		     </div>
+		 </owl-carousel>
+	</div>
+ 	<div fxFlex="70" fxFlex.lt-md='100'>
+	 	<p class="bg-modal-content">{{blog_data.content}}</p>
+	</div>
+	<div fxLayout fxLayout.xs="column" fxFlex.lt-md='false' fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="5px">
+		<share-button button="facebook" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 10px;" ></share-button>
+		<share-button button="twitter" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 10px;"></share-button>
+		<share-button button="linkedin" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 10px;"></share-button>
+		<share-button button="google" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 10px;"></share-button>
+	</div>
+</section>

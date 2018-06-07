@@ -11,6 +11,7 @@ import { SharedModule } from 'app/shared';
 import { RouterService, RestService } from 'app/service';
 import { OwlModule } from 'ngx-owl-carousel';
 import { ScrollToModule } from 'ng2-scroll-to-el';
+import { BlogsModule } from '@app/modules/blogs/blogs.module';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { ScrollToModule } from 'ng2-scroll-to-el';
     NavRoutingModule,
     SharedModule,
     OwlModule,
+    BlogsModule,
     ScrollToModule.forRoot()
   ],
   providers: [RouterService, RestService],

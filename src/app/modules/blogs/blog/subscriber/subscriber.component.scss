@@ -1,0 +1,16 @@
+%common-text-style {
+    text-shadow: 1px 1px lightgrey;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 40px;
+}
+
+.subscribe-full-width {
+	margin: 0px !important;
+}
+
+.subSuccessed {
+	@extend %common-text-style;
+	font-size: 25px;
+    color: #081b33;
+}

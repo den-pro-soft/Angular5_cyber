@@ -20,18 +20,7 @@ export class NavMainComponent implements OnInit {
   ngOnInit() {
   }
 
-  disp_cont(flag: number) {
-    if (flag == 1) {
-      this.disp_flg = 1;
-    }
-    else if (flag == 2) {
-      this.disp_flg = 2;
-    }
-    else if (flag == 3) {
-      this.disp_flg = 3;
-    }
-    else {
-      this.disp_flg = 4;
-    }
+  to_pccsPage() {
+    this.routerService.to_pccsPage();
   }
 }

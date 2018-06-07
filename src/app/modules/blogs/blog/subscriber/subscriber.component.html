@@ -1,0 +1,36 @@
+<form fxLayout="column" class="subscribe-form" fxLayoutGap="20px" [formGroup]="form" *ngIf="!sb_success">
+	<div fxLayout="row wrap" fxLayoutAlign="center stretch" fxLayoutGap="10px">
+		<mat-form-field fxFlex="52" fxFlex.lt-md="100" class="subscribe-full-width">
+		    <input matInput placeholder="Name" formControlName="nameFormControl"
+		           [errorStateMatcher]="matcher">
+		    <mat-hint>Errors appear instantly!</mat-hint>
+		    <mat-error *ngIf="form.hasError('required', 'nameFormControl')">
+		      Name is <strong>required</strong>
+		    </mat-error>
+	  	</mat-form-field>
+		<mat-form-field fxFlex="52" fxFlex.lt-md="100" class="subscribe-full-width">
+		    <input matInput placeholder="Email Address" formControlName="emailFormControl"
+		           [errorStateMatcher]="matcher">
+		    <mat-hint>Errors appear instantly!</mat-hint>
+		    <mat-error *ngIf="form.hasError('email', 'emailFormControl') && !form.hasError('required', 'emailFormControl')">
+		      Please enter a valid email address
+		    </mat-error>
+		    <mat-error *ngIf="form.hasError('required', 'emailFormControl')">
+		      Email is <strong>required</strong>
+		    </mat-error>
+	  	</mat-form-field>
+		<mat-form-field fxFlex="52" fxFlex.lt-md="100" class="subscribe-full-width">
+		    <input matInput placeholder="Organization" formControlName="orgFormControl"
+		           [errorStateMatcher]="matcher">
+		    <mat-hint>Errors appear instantly!</mat-hint>
+		    <mat-error *ngIf="form.hasError('required', 'orgFormControl')">
+		      Organization is <strong>required</strong>
+		    </mat-error>
+	  	</mat-form-field>
+	</div>
+  	<div fxLayout="row" fxLayoutAlign="center center">
+  		<button mat-raised-button type="submit" (click)='subscribe()'>SUBSCRIBE</button>
+  	</div>
+  	<div fxLayout="row"><br></div>
+</form>
+<div fxLayout="column" fxLayoutAlign="center center" class="subSuccessed" *ngIf="sb_success">Thank you!<br></div>
