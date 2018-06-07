@@ -42,14 +42,14 @@ export class PccsMainComponent implements OnInit {
   ngOnInit() {
     const token = LocalStorageService.getToken();
     const user = LocalStorageService.getUser();
-    const rst_flag = LocalStorageService.get_front_reset();
+    const rst_flag = LocalStorageService.getRestFlag();
     console.log(token);
     console.log(user);
     this.isSignup = false;
 
     if (!token || !user)
     {
-        this.isLoggedIn = true;
+        this.isLoggedIn = false;
         this.routerService.afterLogoutPage();
     }
     else
@@ -57,6 +57,9 @@ export class PccsMainComponent implements OnInit {
         this.isLoggedIn=true;
         if (rst_flag == true){
           this.routerService.afterLoginPage();
+        }
+        else {
+          this.routerService.resetPage();
         }
     }
   }
@@ -113,11 +116,10 @@ export class PccsMainComponent implements OnInit {
             }
             console.log(result);
             console.log("-0-------");
-            var flag = LocalStorageService.get_front_reset();
             LocalStorageService.login(result);
             this.isLoggedIn = true;
 
-            if (!flag) {
+            if (!result['no_reset']) {
               this.routerService.resetPage();
             }
             else {

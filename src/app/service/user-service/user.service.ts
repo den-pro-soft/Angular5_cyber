@@ -12,7 +12,7 @@ import { AuthModel, LoginModel, ResetModel } from '@app/models';
 @Injectable()
 export class UserService
 {
-    url = 'http://localhost:8000/rest-auth';
+    url = 'rest-auth';
 
     constructor(private http: HttpClient)
     {
